@@ -1,16 +1,16 @@
 # AI Voice Chat Agent with ElevenLabs + InfraNodus (Graph RAG) — n8n Workflow
 
-A **voice-enabled AI chat agent** that routes user questions to multiple **InfraNodus Graph RAG “experts”** (knowledge graphs) and returns a **conversational response** back to the caller (e.g., ElevenLabs Conversational AI widget). Built as an **n8n orchestration workflow** with memory + tool-based expert selection.
+A voice-enabled AI chat agent that routes user questions to multiple InfraNodus Graph RAG “experts” (knowledge graphs) and returns a conversational response back to the caller (e.g., ElevenLabs Conversational AI widget). Built as an n8n orchestration workflow with memory + tool-based expert selection.
 
 ---
 
 ## What This Does
 
-- **Voice chat frontend (ElevenLabs Conversational AI)** sends user messages to an **n8n Webhook**
-- **n8n AI Agent** decides which expert tool(s) to call (min 1, max 3)
-- Each expert is an **InfraNodus graph** queried via HTTP (Graph RAG response + summary + statements)
-- **Memory node** keeps session context (`sessionId`) for multi-turn conversations
-- Final answer is returned via **Respond to Webhook** (and can be forwarded to Telegram or other channels)
+- **Voice chat frontend (ElevenLabs Conversational AI) sends user messages to an n8n Webhook
+- n8n AI Agent decides which expert tool(s) to call (min 1, max 3)
+- Each expert is an InfraNodus graph queried via HTTP (Graph RAG response + summary + statements)
+- Memory node keeps session context (`sessionId`) for multi-turn conversations
+- Final answer is returned via Respond to Webhook (and can be forwarded to Telegram or other channels)
 
 ---
 
@@ -101,4 +101,10 @@ You are a voice AI assistant that answers using the knowledge_base tool.
 2) Send the user's message to the knowledge_base tool without changing it.
 3) Use the returned answer to respond, making it concise and conversational while keeping specifics.
 IMPORTANT: Always use knowledge_base for answers.
+
+
+## Author
+**Osama Shakeel**
+
+Senior AI Engineer
 
