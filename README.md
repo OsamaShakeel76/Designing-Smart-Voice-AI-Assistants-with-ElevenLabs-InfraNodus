@@ -6,7 +6,7 @@ A voice-enabled AI chat agent that routes user questions to multiple InfraNodus 
 
 ## What This Does
 
-- **Voice chat frontend (ElevenLabs Conversational AI) sends user messages to an n8n Webhook
+- Voice chat frontend (ElevenLabs Conversational AI) sends user messages to an n8n Webhook
 - n8n AI Agent decides which expert tool(s) to call (min 1, max 3)
 - Each expert is an InfraNodus graph queried via HTTP (Graph RAG response + summary + statements)
 - Memory node keeps session context (`sessionId`) for multi-turn conversations
